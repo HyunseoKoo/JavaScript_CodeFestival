@@ -10,3 +10,10 @@
 입력: 20 30 40
 출력: 30
 */
+
+function average(a) {
+  let b = a.replace(/ /g, ',');
+  console.log(b);
+}
+
+average('20 30 40');
