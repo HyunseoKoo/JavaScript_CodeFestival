@@ -12,8 +12,8 @@
 */
 
 function average(str) {
-  let split = str.split(' '); //
-  let numArr = split.map((i) => Number(i)); //
+  let split = str.split(' ');
+  let numArr = split.map((i) => Number(i));
   let sum = numArr.reduce((sum, n) => {
     return sum + n;
   }); // 90
@@ -22,7 +22,7 @@ function average(str) {
   console.log(result);
 }
 
-average('151 39 48');
+average('151 39 48 50');
 
 /*
 1. 숫자를 공백으로 구분 -> array.split(' ')   공백으로 문자열인 숫자를 각각의 요소로 배열화함. [ '20', '30', '40' ]
