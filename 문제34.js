@@ -13,21 +13,25 @@
 출력: YES
 */
 
-function checkout(input) {
-  let arr = input.split(' ');
-  console.log(arr); // [ '176', '156', '155', '165', '166', '169' ]
-  let sort = arr.sort();
-  console.log(sort); // [ '155', '156', '165', '166', '169', '176' ]
-  for (i = 0; i < input.length; i++) {
-    if (Number(arr[i]) == Number(sort[i])) {
-      console.log(Number(arr[i]));
-      console.log(Number(sort[i]));
-      return 'YES';
+function input(a) {
+  let origin = a.split(' ');
+  let devide = a.split(' ');
+  let devideSort = devide.sort();
+
+  let result1 = [];
+  for (i = 0; i < a.length; i++) {
+    if (origin[i] == devideSort[i]) {
+      result1.push('YES');
+    } else {
+      result1.push('NO');
     }
-    if (arr[i] != sort[i]) {
-      return 'NO';
-    }
+  }
+  if (result1.includes('NO') == true) {
+    return 'NO';
+  } else {
+    return 'Yes';
   }
 }
 
-console.log(checkout('176 156 155 165 166 169'));
+console.log(input('176 156 155 165 166 169'));
+console.log(input('155 156 165 166 169 176'));
