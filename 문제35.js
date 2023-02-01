@@ -21,9 +21,42 @@ const c = one(4);
 
 function one(n) {
   function two() {
-    function a(el) {
-      return el ** n;
+    console.log(n);
+    if (n == 2) {
+      return function a(e) {
+        return e ** 2;
+      };
     }
+
+    if (n == 3) {
+      function b(e) {
+        return e ** 3;
+      }
+      return b();
+    }
+
+    if (n == 4) {
+      function c(e) {
+        return e ** 4;
+      }
+      return c();
+    }
+
+    // if (n == 4)
+    //   return function c(e) {
+    //     e ** 4;
+    //   };
+
+    // function c(e) {
+    //   if (n != 4) return;
+    //   if (n == 4) return e ** n;
+    // }
+
+    // if (n == 4) {
+    //   return function c(e) {
+    //     e ** n;
+    //   };
+    // }
   }
   return two;
 }
@@ -32,6 +65,7 @@ const a = one(2);
 const b = one(3);
 const c = one(4);
 
-console.log(a(10));
-console.log(b(10));
-console.log(c(10));
+// console.log(a);
+console.log(a(10)); // 100
+console.log(b(10)); // 1000
+console.log(c(10)); // 10000
